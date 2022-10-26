@@ -2,10 +2,42 @@
     box-sizing: border-box;
 }
 
-
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: lightblue;
+}
 
 main {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main > div {
+    height: 80vh;
+    overflow-y: scroll;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+main > div:nth-child(1) {
+    width: 30vw;
+}
+
+main > div:nth-child(2n) {
+    width: 60vw;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
 }
