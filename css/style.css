@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     background-color: lightblue;
+    margin: 0;
 }
 
 main {
@@ -19,14 +20,20 @@ main {
     justify-content: space-evenly;
 }
 
+h1 {
+    width: 100vw;
+    padding-left: 3.5vw;
+    background-color: gray;
+}
+
 main > div {
     height: 80vh;
     overflow-y: scroll;
     background-color: rgb(245, 245, 245);
-    border: 1px solid black;
+    border: 1.5px dashed black;
     border-radius: 20px;
     padding: 10px;
-
+    box-shadow: 1px 1px 1px;
 }
 
 main > div:nth-child(1) {
@@ -39,5 +46,4 @@ main > div:nth-child(2n) {
 
 .title {
     text-align: center;
-    text-transform: uppercase;
 }

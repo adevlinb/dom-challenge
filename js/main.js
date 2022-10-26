@@ -1,15 +1,7 @@
-/*----- constants -----*/
-
-
-
-
-
 /*----- app's state (variables) -----*/
 let users;
 let posts;
 let selectedUser;
-
-
 
 
 /*----- cached element references -----*/
@@ -18,14 +10,8 @@ let postsDiv = document.getElementById("posts")
 let postsHeaderEl = document.getElementById("selectedUser")
 
 
-
-
 /*----- event listeners -----*/
 usersDiv.addEventListener("click", handleUserClick);
-
-
-
-
 
 
 /*----- functions -----*/
@@ -60,7 +46,7 @@ function renderPosts() {
         postsHeaderEl.textContent = "Please Select A User On The Left"
     } else {
         console.log(selectedUser.name)
-        postsHeaderEl.textContent = selectedUser.name
+        postsHeaderEl.textContent = `${selectedUser.name}'s Posts:`
         posts.forEach(function(post, idx) {
             let title = document.createElement("h3");
             title.innerHTML = post.title
