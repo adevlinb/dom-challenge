@@ -20,7 +20,6 @@ init();
 
 async function init() {
     // get all users
-    console.log("test")
     users = [];
     posts = [];
     await fetch('https://jsonplaceholder.typicode.com/users')
@@ -32,7 +31,6 @@ async function init() {
 }
 
 function renderUsers() {
-    console.log(users, posts)
     users.forEach(function(user, idx) {
         let title = document.createElement("h3");
         title.innerHTML = user.name
@@ -45,7 +43,6 @@ function renderPosts() {
     if (posts.length === 0) {
         postsHeaderEl.textContent = "Please Select A User On The Left"
     } else {
-        console.log(selectedUser.name)
         postsHeaderEl.textContent = `${selectedUser.name}'s Posts:`
         posts.forEach(function(post, idx) {
             let title = document.createElement("h3");
@@ -63,7 +60,6 @@ function clearPreviousPosts() {
 
 
 async function handleUserClick(evt) {
-    console.log(evt.target.id)
     if(evt.target.id === "users") return
     selectedUser = users[evt.target.id]
     posts = [];
